@@ -731,46 +731,50 @@
 
     <script>
         // Base de datos de audios
+        const BASE_URL = "https://kevinsoler313askdiscovery-sudo.github.io/monkeytravel-audios/audios/";
+
         const audioDatabase = {
             españolLatam: [
-                { id: 1, title: 'INTRODUCCIÓN', url: 'audios/español/1.introduccion_es.mp3' },
-                { id: 2, title: 'CIUDAD DE BANGKOK', url: 'audios/español/2.ciudad_de_bangkok_es.mp3' },
-                { id: 3, title: 'CLIMA', url: 'audios/español/3.clima_es.mp3' },
-                { id: 4, title: 'EL IMPACTO DEL TURISMO EN TAILANDIA', url: 'audios/español/4.el_impacto_del_tourismo_en_tahilandia_es.mp3' },
-                { id: 5, title: 'UNA HISTORIA DE LIBERTAD', url: 'audios/español/5.una_historia_de_libertad_es.mp3' },
-                { id: 6, title: 'JERARQUÍA, HONOR Y ARMONÍA', url: 'audios/español/6.jerarquia_honor_y_armonia_es.mp3' },
-                { id: 7, title: 'MANEJO DEL CUERPO Y LAS POSTURAS CORPORALES', url: 'audios/español/7.manejo_del_cuerpo_y_las_posturas_corporales_es.mp3' },
-                { id: 8, title: 'FILOSOFÍA', url: 'audios/español/8.filosofia_es.mp3' },
-                { id: 9, title: 'TAILANDIA A SU RITMO', url: 'audios/español/9.tailandia_a_su_ritmo_es.mp3' },
-                { id: 10, title: 'LA SONRISA', url: 'audios/español/10.la_sonrisa_es.mp3' },
-                { id: 11, title: 'COSTUMBRES', url: 'audios/español/11.costumbres_es.mp3' },
-                { id: 12, title: 'MONJES, FE Y CREENCIAS', url: 'audios/español/12.monjes_fe_y_creencias_es.mp3' },
-                { id: 13, title: 'EL MERCADO DE MAKELONG', url: 'audios/español/13.el_mercado_de_makelong_es.mp3' },
-                { id: 14, title: 'GASTRONOMÍA', url: 'audios/español/14.gastronomia_es.mp3' },
-                { id: 15, title: 'PROPINAS', url: 'audios/español/15.propinas_es.mp3' },
-                { id: 16, title: 'EL MERCADO FLOTANTE DAMNOEN SADUAK', url: 'audios/español/16.el_mercado_flotante_damnoen_saduak_es.mp3' },
-                { id: 17, title: 'SALUDO FINAL', url: 'audios/español/17.saludo_final_es.mp3' }
+                { id: 1, title: 'INTRODUCCIÓN', url: BASE_URL + 'español/1.introduccion_es.mp3' },
+                { id: 2, title: 'CIUDAD DE BANGKOK', url: BASE_URL + 'español/2.ciudad_de_bangkok_es.mp3' },
+                { id: 3, title: 'CLIMA', url: BASE_URL + 'español/3.clima_es.mp3' },
+                { id: 4, title: 'EL IMPACTO DEL TURISMO EN TAILANDIA', url: BASE_URL + 'español/4.el_impacto_del_tourismo_en_tahilandia_es.mp3' },
+                { id: 5, title: 'UNA HISTORIA DE LIBERTAD', url: BASE_URL + 'español/5.una_historia_de_libertad_es.mp3' },
+                { id: 6, title: 'JERARQUÍA, HONOR Y ARMONÍA', url: BASE_URL + 'español/6.jerarquia_honor_y_armonia_es.mp3' },
+                { id: 7, title: 'MANEJO DEL CUERPO Y LAS POSTURAS CORPORALES', url: BASE_URL + 'español/7.manejo_del_cuerpo_y_las_posturas_corporales_es.mp3' },
+                { id: 8, title: 'FILOSOFÍA', url: BASE_URL + 'español/8.filosofia_es.mp3' },
+                { id: 9, title: 'TAILANDIA A SU RITMO', url: BASE_URL + 'español/9.tailandia_a_su_ritmo_es.mp3' },
+                { id: 10, title: 'LA SONRISA', url: BASE_URL + 'español/10.la_sonrisa_es.mp3' },
+                { id: 11, title: 'COSTUMBRES', url: BASE_URL + 'español/11.costumbres_es.mp3' },
+                { id: 12, title: 'MONJES, FE Y CREENCIAS', url: BASE_URL + 'español/12.monjes_fe_y_creencias_es.mp3' },
+                { id: 13, title: 'EL MERCADO DE MAKELONG', url: BASE_URL + 'español/13.el_mercado_de_makelong_es.mp3' },
+                { id: 14, title: 'GASTRONOMÍA', url: BASE_URL + 'español/14.gastronomia_es.mp3' },
+                { id: 15, title: 'PROPINAS', url: BASE_URL + 'español/15.propinas_es.mp3' },
+                { id: 16, title: 'EL MERCADO FLOTANTE DAMNOEN SADUAK', url: BASE_URL + 'español/16.el_mercado_flotante_damnoen_saduak_es.mp3' },
+                { id: 17, title: 'SALUDO FINAL', url: BASE_URL + 'español/17.saludo_final_es.mp3' }
             ],
+
             english: [
-                { id: 1, title: 'INTRODUCTION', url: 'audios/ingles/1.introduccion_en.mp3' },
-                { id: 2, title: 'CITY OF BANGKOK', url: 'audios/ingles/2.ciudad_de_bangkok_en.mp3' },
-                { id: 3, title: 'CLIMATE', url: 'audios/ingles/3.clima_en.mp3' },
-                { id: 4, title: 'THE IMPACT OF TOURISM IN THAILAND', url: 'audios/ingles/4.el_impacto_del_tourismo_en_tahilandia_en.mp3' },
-                { id: 5, title: 'A HISTORY OF FREEDOM', url: 'audios/ingles/5.una_historia_de_libertad_en.mp3' },
-                { id: 6, title: 'HIERARCHY, HONOR AND HARMONY', url: 'audios/ingles/6.jerarquia_honor_y_armonia_en.mp3' },
-                { id: 7, title: 'BODY CONTROL AND BODY POSTURES', url: 'audios/ingles/7.manejo_del_cuerpo_y_las_posturas_corporales_en.mp3' },
-                { id: 8, title: 'PHILOSOPHY', url: 'audios/ingles/8.filosofia_en.mp3' },
-                { id: 9, title: 'THAILAND AT ITS OWN PACE', url: 'audios/ingles/9.tailandia_a_su_ritmo_en.mp3' },
-                { id: 10, title: 'THE SMILE', url: 'audios/ingles/10.la_sonrisa_en.mp3' },
-                { id: 11, title: 'CUSTOMS', url: 'audios/ingles/11.costumbres_en.mp3' },
-                { id: 12, title: 'MONKS, FAITH AND BELIEFS', url: 'audios/ingles/12.monjes_fe_y_creencias_en.mp3' },
-                { id: 13, title: 'THE MAKELONG MARKET', url: 'audios/ingles/13.el_mercado_de_makelong_en.mp3' },
-                { id: 14, title: 'GASTRONOMY', url: 'audios/ingles/14.gastronomia_en.mp3' },
-                { id: 15, title: 'TIPS', url: 'audios/ingles/15.propinas_en.mp3' },
-                { id: 16, title: 'THE DAMNOEN SADUAK FLOATING MARKET', url: 'audios/ingles/16.el_mercado_flotante_damnoen_saduak_en.mp3' },
-                { id: 17, title: 'FINAL GREETING', url: 'audios/ingles/17.saludo_final_en.mp3' }
+                { id: 1, title: 'INTRODUCTION', url: BASE_URL + 'ingles/1.introduccion_en.mp3' },
+                { id: 2, title: 'CITY OF BANGKOK', url: BASE_URL + 'ingles/2.ciudad_de_bangkok_en.mp3' },
+                { id: 3, title: 'CLIMATE', url: BASE_URL + 'ingles/3.clima_en.mp3' },
+                { id: 4, title: 'THE IMPACT OF TOURISM IN THAILAND', url: BASE_URL + 'ingles/4.el_impacto_del_tourismo_en_tahilandia_en.mp3' },
+                { id: 5, title: 'A HISTORY OF FREEDOM', url: BASE_URL + 'ingles/5.una_historia_de_libertad_en.mp3' },
+                { id: 6, title: 'HIERARCHY, HONOR AND HARMONY', url: BASE_URL + 'ingles/6.jerarquia_honor_y_armonia_en.mp3' },
+                { id: 7, title: 'BODY CONTROL AND BODY POSTURES', url: BASE_URL + 'ingles/7.manejo_del_cuerpo_y_las_posturas_corporales_en.mp3' },
+                { id: 8, title: 'PHILOSOPHY', url: BASE_URL + 'ingles/8.filosofia_en.mp3' },
+                { id: 9, title: 'THAILAND AT ITS OWN PACE', url: BASE_URL + 'ingles/9.tailandia_a_su_ritmo_en.mp3' },
+                { id: 10, title: 'THE SMILE', url: BASE_URL + 'ingles/10.la_sonrisa_en.mp3' },
+                { id: 11, title: 'CUSTOMS', url: BASE_URL + 'ingles/11.costumbres_en.mp3' },
+                { id: 12, title: 'MONKS, FAITH AND BELIEFS', url: BASE_URL + 'ingles/12.monjes_fe_y_creencias_en.mp3' },
+                { id: 13, title: 'THE MAKELONG MARKET', url: BASE_URL + 'ingles/13.el_mercado_de_makelong_en.mp3' },
+                { id: 14, title: 'GASTRONOMY', url: BASE_URL + 'ingles/14.gastronomia_en.mp3' },
+                { id: 15, title: 'TIPS', url: BASE_URL + 'ingles/15.propinas_en.mp3' },
+                { id: 16, title: 'THE DAMNOEN SADUAK FLOATING MARKET', url: BASE_URL + 'ingles/16.el_mercado_flotante_damnoen_saduak_en.mp3' },
+                { id: 17, title: 'FINAL GREETING', url: BASE_URL + 'ingles/17.saludo_final_en.mp3' }
             ]
         };
+
 
         // Variables globales
         let currentLanguage = '';
